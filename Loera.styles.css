@@ -72,6 +72,13 @@ line-height: 1.35;
 
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: var(--dark-gray);
+        color: var(--light-gray);
+    }
+}
+
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK
 MODE */
 /* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
@@ -223,7 +230,7 @@ float: left;
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 /* ---------- LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN LARGE SCREEN SIZES --------------- */
-@media (max-width: 1189px) {
+@media (min-width: 1025px) {
     header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
@@ -255,10 +262,14 @@ float: left;
 /* --------------- END LARGE SCREEN SIZES --------------- */
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-img{
-width: 300px;
-max-width: 300px;
-} 
+@media (max-width: 1189px){
+    img{
+        width: 300px;
+        max-width: 300px;
+        } 
+
+}
+
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
